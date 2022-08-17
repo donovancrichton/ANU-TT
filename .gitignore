@@ -1,0 +1,28 @@
+# Idris1 build files
+**/*.ibc
+
+# Idris2 build files
+**/*.ttc
+**/*.ttm
+**/*.idr~
+
+# swap files
+**/*.swp
+
+# latex build files
+**/*.aux
+**/*.bbl
+**/*.blg
+**/*.fdb_latexmk
+**/*.log
+**/*.tex.bak
+**/*.fls
+**/*.toc
+**/*.log
+**/*.nav
+**/*.out
+**/*.snm
+**/*.vrb
+**/*.pygtex
+**/*.pygstyle
+
