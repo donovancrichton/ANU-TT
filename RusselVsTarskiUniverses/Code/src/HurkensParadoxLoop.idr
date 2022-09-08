@@ -16,6 +16,7 @@ P x = x -> Type
 -- consider this universe. 
 -- Essentially this implies an ordering?
 𝓤 : Type
+-- ∀(x : Type) -> ∃x.P(x) -> ∃x.P?
 𝓤 = (x : Type) -> (P (P x) -> x) -> P (P x)
 
 τ : P (P 𝓤) -> 𝓤
@@ -33,7 +34,6 @@ P x = x -> Type
 D : Type
 D = (p : P 𝓤) -> σ Ω p -> p (τ (σ Ω))
 
--- 
 lemma1 : (p : P 𝓤) -> ((x : 𝓤) -> σ x p -> p x) -> p Ω
 lemma1 p h1 = h1 Ω (\x => h1 (τ (σ x)))
 
@@ -49,5 +49,3 @@ loop = lemma2 lemma3
 
 trueIsFalse : True = False
 trueIsFalse = void loop
-
-
